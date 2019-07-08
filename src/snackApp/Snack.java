@@ -4,7 +4,7 @@ public class Snack {
     private static int maxId = 0;
     private int id;
     private String name;
-    private int quantity;
+    public int quantity;
     private double price;
     private int machineId;
 
@@ -30,7 +30,7 @@ public class Snack {
         this.name = name;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -58,8 +58,8 @@ public class Snack {
         this.quantity -= quantityPurchased;
     }
 
-    public int getTotalCost() {
-        return quantityPurchased * price;
+    public double getTotalCost(int quantity) {
+       return quantity * price;
     }
 
 }

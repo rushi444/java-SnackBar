@@ -1,21 +1,21 @@
 package snackApp;
 
 public class Customer {
-    private int maxID = 0;
-    private int id;
-    private String name;
-    private double cashOnHand;
+    public int maxID = 0;
+    public int id;
+    public String name;
+    public double cashOnHand;
 
-    public Customer(int id, String name, double cashOnHand) {
+    public Customer(String name, double cashOnHand) {
         maxID++;
         id = maxID;
         this.name = name;
         this.cashOnHand = cashOnHand;
     }
 
-    public int getID() {
-        return id;
-    }
+    // public int getID() {
+    //     return id;
+    // }
 
     public void addCash(double cashOnHand) {
         this.cashOnHand = this.cashOnHand += cashOnHand;
